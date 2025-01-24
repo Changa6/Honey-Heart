@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Honey Heart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="honeycomb-bg"></div>
+    <div class="game-container">
+        <div class="game-title">
+            <span class="bee-icon">🐝</span>
+            <span class="honey-text">Honey</span>
+            <span class="heart-text">Heart</span>
+            <span class="bee-icon">🐝</span>
+        </div>
+
+        <div class="game-header">
+            <div class="score-item">
+                <span class="score-icon">🍯</span>
+                <span id="score">0</span>
+            </div>
+            <div class="score-item lives-display">
+                <div id="lives-container">❤️❤️❤️</div>
+            </div>
+            <div class="score-item">
+                <span class="score-icon">👑</span>
+                <span id="highScore">0</span>
+            </div>
+        </div>
+
+        <div id="gameArea" class="game-area">
+            <div class="start-screen">
+                <button class="start-btn" id="startButton">Start Game</button>
+            </div>
+            <div class="player" id="player">🐝</div>
+        </div>
+
+        <div class="controls">
+            <div class="powerups">
+                <button id="shieldPowerup" class="powerup-btn" disabled title="Shield">🌺</button>
+                <button id="magnetPowerup" class="powerup-btn" disabled title="Magnet">🍯</button>
+                <button id="slowPowerup" class="powerup-btn" disabled title="Slow Time">🌸</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver" class="modal hidden">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <div class="final-stats">
+                <p>Score: <span id="finalScore">0</span></p>
+                <p>High Score: <span id="finalHighScore">0</span></p>
+            </div>
+            <button id="restartButton" class="start-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
